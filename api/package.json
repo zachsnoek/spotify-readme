@@ -1,0 +1,24 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsc && npm run copy",
+    "copy": "cp -r templates/ dist/templates",
+    "watch": "tsc -w",
+    "prestart": "npm run build",
+    "publish": "func azure functionapp publish spotify-readme",
+    "start": "func start"
+  },
+  "dependencies": {
+    "axios": "^0.21.4",
+    "ejs": "^3.1.6"
+  },
+  "devDependencies": {
+    "@azure/functions": "^1.2.3",
+    "@types/axios": "^0.14.0",
+    "@types/ejs": "^3.1.0",
+    "@types/node": "^16.9.1",
+    "typescript": "^4.0.0"
+  }
+}
